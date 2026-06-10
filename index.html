@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="creme" data-font="sans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumina Learning</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">✦</span>
+        <span class="logo-text">Lumina Learning</span>
+      </div>
+      <nav class="header-nav">
+        <button class="nav-btn" id="notifBtn" aria-label="Notificações">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          <span class="nav-badge" id="notifBadge">3</span>
+        </button>
+        <button class="nav-btn" id="configNavBtn" aria-label="Ir para Configurações">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        </button>
+        <div class="avatar" id="avatarBtn" role="button" tabindex="0" aria-label="Perfil">F</div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- SEÇÃO 1: DASHBOARD -->
+    <section class="section" id="sec-dashboard" aria-labelledby="dashboard-title">
+      <div class="section-label">Dashboard Simplificado</div>
+
+      <div class="welcome-bar">
+        <div class="welcome-text">
+          <h1 id="dashboard-title" class="welcome-title">Olá, Fabrício! <span class="wave">👋</span></h1>
+          <p class="welcome-sub">Bem-vindo à plataforma adaptativa.</p>
+        </div>
+        <button class="btn btn-outline" id="goConfigBtn">⚙️ Configuração</button>
+      </div>
+
+      <div class="card progress-card">
+        <h2 class="card-title">Progresso Semanal</h2>
+        <div class="progress-bar-wrap">
+          <div class="progress-bar" style="--pct:68%"></div>
+        </div>
+        <div class="bar-chart">
+          <div class="bar-col"><div class="bar" style="--h:40%"></div><span class="bar-label">S</span></div>
+          <div class="bar-col"><div class="bar" style="--h:65%"></div><span class="bar-label">T</span></div>
+          <div class="bar-col"><div class="bar" style="--h:50%"></div><span class="bar-label">Q</span></div>
+          <div class="bar-col"><div class="bar bar--active" style="--h:85%"></div><span class="bar-label">Q</span></div>
+          <div class="bar-col"><div class="bar" style="--h:30%"></div><span class="bar-label">S</span></div>
+        </div>
+      </div>
+
+      <div class="dashboard-grid">
+        <div class="card">
+          <h2 class="card-title">Meus Cursos</h2>
+          <div class="courses-grid">
+            <article class="course-card" id="course1" tabindex="0" role="button" aria-label="Abrir Módulo 1">
+              <div class="course-thumb course-thumb--1"></div>
+              <div class="course-info">
+                <h3 class="course-name">Módulo 1</h3>
+                <p class="course-tag">Curso atual</p>
+                <div class="progress-bar-wrap mini"><div class="progress-bar" style="--pct:72%"></div></div>
+                <span class="course-pct">72%</span>
+              </div>
+            </article>
+            <article class="course-card" id="course2" tabindex="0" role="button" aria-label="Abrir Módulo 2">
+              <div class="course-thumb course-thumb--2"></div>
+              <div class="course-info">
+                <h3 class="course-name">Módulo 2</h3>
+                <p class="course-tag">Próximo módulo</p>
+                <div class="progress-bar-wrap mini"><div class="progress-bar" style="--pct:15%"></div></div>
+                <span class="course-pct">15%</span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Minhas Tarefas</h2>
+          <ul class="task-list" id="taskList">
+            <li class="task-item task-done" data-done="true">
+              <button class="task-check" aria-label="Desmarcar Plano de tarefas">✓</button>
+              <div class="task-body"><span class="task-name">Plano de tarefas</span><span class="task-time">25 minutos</span></div>
+            </li>
+            <li class="task-item task-done" data-done="true">
+              <button class="task-check" aria-label="Desmarcar Leitura guiada">✓</button>
+              <div class="task-body"><span class="task-name">Leitura guiada</span><span class="task-time">28 minutos</span></div>
+            </li>
+            <li class="task-item" data-done="false">
+              <button class="task-check task-check--empty" aria-label="Marcar Revisão"></button>
+              <div class="task-body"><span class="task-name">Revisão</span><span class="task-time">25 minutos</span></div>
+            </li>
+            <li class="task-item" data-done="false">
+              <button class="task-check task-check--empty" aria-label="Marcar Configurações"></button>
+              <div class="task-body"><span class="task-name">Configurações</span><span class="task-time">20 minutos</span></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 2: ÁREA DE ESTUDO -->
+    <section class="section" id="sec-study" aria-labelledby="study-title">
+      <div class="section-label">Área de Estudo</div>
+      <h2 id="study-title" class="section-title">Área de Estudo com Ajuste Sensorial</h2>
+
+      <div class="study-layout">
+
+        <div class="reading-area card" id="readingArea">
+          <h3 class="reading-title">Lógica de leitura</h3>
+          <div class="reading-pages" id="readingPages">
+            <div class="reading-page active" data-page="0">
+              <p class="reading-text">O aprendizado adaptativo reconhece que cada mente funciona de maneira única. Ao ajustar o ritmo, o formato e o suporte visual, conseguimos criar um espaço onde todos podem absorver conhecimento com conforto e eficiência.</p>
+              <p class="reading-text">A fragmentação de tarefas é uma estratégia poderosa para estudantes neurodivergentes. Dividir conteúdo longo em blocos menores reduz a sobrecarga cognitiva e aumenta a sensação de progresso, tornando o aprendizado mais prazeroso e sustentável.</p>
+            </div>
+            <div class="reading-page" data-page="1">
+              <p class="reading-text">O cérebro neurodivergente muitas vezes processa informações de forma não-linear. Ferramentas visuais como mapas mentais ajudam a conectar ideias de maneira orgânica, respeitando esse fluxo natural de pensamento.</p>
+              <p class="reading-text">Estudos mostram que pequenas pausas regulares durante o estudo aumentam a retenção de informação em até 40%. A técnica Pomodoro, adaptada para diferentes perfis, pode ser um aliado poderoso no dia a dia.</p>
+            </div>
+            <div class="reading-page" data-page="2">
+              <p class="reading-text">A personalização do ambiente de estudo — incluindo cores, fontes e espaçamento — reduz significativamente a fadiga visual e cognitiva. Cada pequeno ajuste pode fazer uma diferença enorme na experiência de aprendizado.</p>
+              <p class="reading-text">Plataformas como a Lumina Learning foram projetadas para se adaptar ao estudante, não o contrário. Use o painel sensorial ao lado para personalizar sua experiência agora mesmo.</p>
+            </div>
+          </div>
+          <div class="reading-meta">
+            <span class="page-indicator" id="pageIndicator">Página 1 de 3</span>
+          </div>
+          <div class="reading-nav">
+            <button class="btn btn-ghost" id="prevBtn" disabled>← Anterior</button>
+            <button class="btn btn-primary" id="nextBtn">Próximo →</button>
+          </div>
+        </div>
+
+        <!-- Painel Sensorial -->
+        <div class="sensory-panel card" id="sensoryPanel">
+          <h3 class="panel-title">Ajustes Sensoriais</h3>
+
+          <div class="panel-row">
+            <span class="panel-label">Modo Foco</span>
+            <button class="toggle" id="focusToggle" role="switch" aria-checked="false" aria-label="Ativar Modo Foco">
+              <div class="toggle-thumb"></div>
+            </button>
+          </div>
+
+          <div class="panel-group">
+            <span class="panel-label">Cores de Fundo</span>
+            <div class="color-options">
+              <button class="color-btn color-creme active" data-theme="creme" aria-label="Tema Creme" title="Creme"></button>
+              <button class="color-btn color-pastel" data-theme="pastel" aria-label="Tema Pastel" title="Pastel"></button>
+              <button class="color-btn color-dark" data-theme="dark" aria-label="Tema Escuro" title="Dark"></button>
+              <button class="color-btn color-contrast" data-theme="contrast" aria-label="Alto Contraste" title="Alto Contraste"></button>
+            </div>
+            <div class="color-labels"><span>Creme</span><span>Pastel</span><span>Dark</span><span>Alto<br>Contraste</span></div>
+          </div>
+
+          <div class="panel-group">
+            <span class="panel-label">Fonte</span>
+            <div class="font-options">
+              <button class="btn btn-sm btn-outline active" data-font="sans" id="fontSans">Sans Serif</button>
+              <button class="btn btn-sm btn-outline" data-font="dyslexic" id="fontDys">OpenDyslexic</button>
+            </div>
+          </div>
+
+          <div class="panel-group">
+            <label class="panel-label" for="fontSizeSlider">Tamanho da Fonte: <strong id="fontSizeLabel">16px</strong></label>
+            <input type="range" class="slider" id="fontSizeSlider" min="14" max="26" value="16" />
+          </div>
+
+          <div class="panel-group">
+            <label class="panel-label" for="lineHeightSlider">Espaçamento: <strong id="lineHeightLabel">1.65</strong></label>
+            <input type="range" class="slider" id="lineHeightSlider" min="140" max="240" value="165" />
+          </div>
+
+          <div class="panel-group">
+            <span class="panel-label">Transformação</span>
+            <div class="transform-btns">
+              <button class="btn btn-icon btn-outline" id="mindMapBtn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="9"/><line x1="12" y1="15" x2="12" y2="22"/><line x1="2" y1="12" x2="9" y2="12"/><line x1="15" y1="12" x2="22" y2="12"/></svg>
+                Gerar Mapa Mental
+              </button>
+              <button class="btn btn-icon btn-outline" id="audioBtn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+                <span id="audioBtnLabel">Ouvir Áudio</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mapa Mental -->
+      <div class="mindmap-container card" id="mindMapContainer" hidden>
+        <h3 class="card-title">🧠 Mapa Mental — Lógica de leitura</h3>
+        <div class="mindmap">
+          <div class="mm-center">Lógica de Leitura</div>
+          <div class="mm-branches">
+            <div class="mm-branch"><div class="mm-node mm-node--1">Aprendizado Adaptativo</div><div class="mm-sub">Ritmo próprio</div><div class="mm-sub">Suporte visual</div></div>
+            <div class="mm-branch"><div class="mm-node mm-node--2">Fragmentação</div><div class="mm-sub">Blocos menores</div><div class="mm-sub">Menos sobrecarga</div></div>
+            <div class="mm-branch"><div class="mm-node mm-node--3">Ambiente</div><div class="mm-sub">Cores adaptadas</div><div class="mm-sub">Fontes acessíveis</div></div>
+            <div class="mm-branch"><div class="mm-node mm-node--4">Pausas</div><div class="mm-sub">+40% retenção</div><div class="mm-sub">Técnica Pomodoro</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 3: CONFIGURAÇÃO -->
+    <section class="section" id="sec-config" aria-labelledby="config-title">
+      <div class="section-label">Configuração</div>
+      <h2 id="config-title" class="section-title">Painel de Configuração do Perfil</h2>
+
+      <div class="card config-card">
+
+        <fieldset class="config-group">
+          <legend class="config-group-title">Configurações de Neurodivergência</legend>
+          <div class="checkbox-row">
+            <label class="checkbox-label"><input type="checkbox" id="chkTDAH" checked /> TDAH</label>
+            <label class="checkbox-label"><input type="checkbox" id="chkDislexia" /> Dislexia</label>
+            <label class="checkbox-label"><input type="checkbox" id="chkTEA" /> TEA (Autismo)</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="config-group">
+          <legend class="config-group-title">Preferências Sensoriais</legend>
+          <div class="config-slider-row">
+            <label class="slider-label" for="colorIntSlider">Intensidade das Cores: <strong id="colorIntLabel">55%</strong></label>
+            <input type="range" class="slider" id="colorIntSlider" min="0" max="100" value="55" />
+          </div>
+          <div class="config-slider-row">
+            <label class="slider-label" for="cfgFontSlider">Tamanho da Fonte: <strong id="cfgFontLabel">18px</strong></label>
+            <input type="range" class="slider" id="cfgFontSlider" min="14" max="28" value="18" />
+          </div>
+          <div class="config-slider-row">
+            <label class="slider-label" for="audioSpeedSlider">Velocidade do Áudio: <strong id="audioSpeedLabel">1.0×</strong></label>
+            <input type="range" class="slider" id="audioSpeedSlider" min="50" max="200" value="100" />
+          </div>
+        </fieldset>
+
+        <fieldset class="config-group">
+          <legend class="config-group-title">Preferências Cognitivas</legend>
+          <div class="config-slider-row">
+            <label class="slider-label" for="fragSlider">Fragmentação de Tarefas: <strong id="fragLabel">Médio</strong></label>
+            <div class="slider-labeled">
+              <input type="range" class="slider" id="fragSlider" min="0" max="2" value="1" step="1" />
+              <div class="slider-ticks"><span>Baixo</span><span>Médio</span><span>Alto</span></div>
+            </div>
+          </div>
+          <label class="checkbox-label mt"><input type="checkbox" id="chkMindMap" /> Modo Mapa Mental Automático</label>
+        </fieldset>
+
+        <div class="config-preview" id="configPreview">
+          <p class="preview-title">📋 Resumo do Perfil</p>
+          <div class="preview-tags" id="previewTags"></div>
+        </div>
+
+        <button class="btn btn-primary btn-large" id="saveProfileBtn">Salvar Perfil</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <span class="logo-icon">✦</span>
+    <span>Lumina Learning — Educação para todas as mentes</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
